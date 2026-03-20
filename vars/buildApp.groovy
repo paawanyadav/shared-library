@@ -1,3 +1,5 @@
-def call(String name) {
-    echo "Hello, ${name}! Welcome to Jenkins Shared Library"
+def call(String appName, String environment = 'dev') {
+    echo "Building ${appName} for ${environment} environment"
+    sh "echo 'Building ${appName}...'"
+    sh "echo 'Environment: ${environment}'"
 }
